@@ -722,7 +722,19 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              inlayHints = {
+                enable = true,
+                paramerterHints = { enable = true },
+                typeHints = { enable = true },
+                chainingHint = { enable = true },
+                closingBraceHints = { enable = true },
+              },
+            },
+          },
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
